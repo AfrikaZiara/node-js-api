@@ -1,0 +1,22 @@
+1)Components & their properties
+2)Set up database system (postgress DB)
+3)Tables & their columns
+4)Database constraints
+
+
+Components & their properties
+
+tour_operator
+tourists
+tour_guide
+log_file
+tour_package
+bookings
+users
+access_levels
+
+
+
+
+
+
