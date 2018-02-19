@@ -1,6 +1,6 @@
-var mysql = require('mysql');
+const mysql = require('mysql');
 
-var con = mysql.createConnection({
+const con = mysql.createConnection({
     host: "localhost",
     user: "frenx",
     password: "Pokerface1994",
@@ -13,7 +13,7 @@ var con = mysql.createConnection({
 con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = "INSERT INTO tour_operators (tour_operator_id,name,description,phone,email) VALUES('1','Kichaka Tours','Kichaka Tours and Travel Limited','+254 791 800 525','info@kichakatours.co.ke')";
+    const sql = "INSERT INTO tour_operators (tour_operator_id,name,description,phone,email) VALUES('1','Kichaka Tours','Kichaka Tours and Travel Limited','+254 791 800 525','info@kichakatours.co.ke')";
     con.query(sql,  function (err, result) {
         if (err) throw err;
         console.log("1 record inserted: " );
@@ -26,7 +26,7 @@ con.query("CREATE DATABASE afrikaziara_db",function (err,result) {
     
 });*/
 // create table tour_operator
-/*var sql = "CREATE TABLE tour_operators (" +
+/*const sql = "CREATE TABLE tour_operators (" +
     "tour_operator_id integer NOT NULL," +
     "name character varying(255)," +
     "description character varying(255)," +
@@ -43,7 +43,7 @@ con.query(sql, function (err, result) {
 
 
 // creating table tour az_users
-/*var sql = "CREATE TABLE az_users (" +
+/*const sql = "CREATE TABLE az_users (" +
     "user_id integer NOT NULL," +
     "username character varying(255)," +
     "fname character varying(255)," +
@@ -60,7 +60,7 @@ con.query(sql, function (err, result) {
 
 // creating table tour tour_bookings
 /*
-var sql = "CREATE TABLE tour_bookings (" +
+const sql = "CREATE TABLE tour_bookings (" +
     "booking_id integer NOT NULL," +
     "tourist_id integer," +
     "tour_package_id integer," +
@@ -78,7 +78,7 @@ con.query(sql, function (err, result) {
 
 // creating table tour tour_packages
 /*
-var sql = "CREATE TABLE tour_packages (" +
+const sql = "CREATE TABLE tour_packages (" +
     "tour_package_id integer NOT NULL," +
     "title character varying(255)," +
     "image_url character varying(255)," +
@@ -95,7 +95,7 @@ con.query(sql, function (err, result) {
 
 
 // creating table tour tourists
-/*var sql = "CREATE TABLE tourists (" +
+/*const sql = "CREATE TABLE tourists (" +
     "tourist_id integer NOT NULL," +
     "first_name character varying(255)," +
     "other_names character varying(255)," +
